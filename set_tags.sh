@@ -1,5 +1,6 @@
 BRANCH="master"
 
+echo -e ${TRAVIS_BRANCH}
 # Are we on the right branch?
 if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
 
