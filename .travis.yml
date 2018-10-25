@@ -19,6 +19,7 @@ deploy:
   file: app/build/outputs/apk/debug/app-debug.apk
   file_glob: 'true'
   skip_cleanup: true
+  overwrite: true
   on:
     tags: true
     branch: master
