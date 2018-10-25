@@ -15,7 +15,8 @@ if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
       git config --global user.email "yhossam@inmobly.com"
       git config --global user.name "YHossam"
       echo -e "Logging"
-	echo ${GH_TOKEN}
+	  echo ${GH_TOKEN}
+	  pwd
       echo -e "Logging"
       git remote remove origin 
       git remote add origin  https://${GH_TOKEN}@github.com/YHossam/TestCI.git > /dev/null 2>&1
