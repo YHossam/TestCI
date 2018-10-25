@@ -14,8 +14,8 @@ script:
 - "./gradlew assembleDebug"
 deploy:
   provider: releases
-  api_key:
-    secure: bCuoQ6YvxD7Iw9mHny+kYaS4L1FLiYX7Shv+Duz6GTMepa2KzlN3BIqc5Twn1+i/+n4b56Sqs6xdpZJ2FNGK6yyXdtxgBVK7NPcPg1coj3CT7Cmbfi+lQYNFZppc+/aFR9UShaJ2ydFQJWKlxy64BMZbth+uvCuQKwXdDC8+pRZ++VOCFDYh3euYJhTM+Tba5vIkVXHXAjT1OBxkR9c0425fgCoRZ8z17wS6IlXME3lGSi1AcSc5OdgrPdL8N30a+kYlEvnAbr6C1O49cnbWbbpMyt0H5TcqU6zaDORhbDKqmO4I5nG451XqTGE/2glXB8UH2SRYhcQCRO7sGd8wmq9BCAud6outfFk6MCWCmXzMru0wYCdwWZtSbBWho7EzrGl3L2B+6WimgwP0y+ml2wJmtIZackMv6RHg93jLfYgiWPsMezvo4QuDkokMTGjAL/FKYZbbr5ialWLqnfAVpQI2BSUrZLQA9qbm7bhD9u8XX8Gmi95VXwTcZFTrOu9xDqvvz7xFAvamOY7zhtnDkRrc3lhRRsh3mRg96XsKWv8T4C2qKqRgg8YUOhcGdOiwg8tXMdNJRDqrfsV5F4zwGJL8f3Zf+jZRjN5EuQWugUiUlun6XCTAk0AOkoIp4S2z3oZF30FcnMfPay9zkIwuy9dZP6UmO9flu1B1gKjNTLQ=
+  api-key:
+      secure: C9BN55/04oiUnrRJ0Vs9ozJVDBsALQgCOjpaYBxw7FNdh6zNgcl+65fqTgsf23a7JlM877r3yMNf6PZYkiBCiQE8T2dh7QZp4d4Loirh7o8GnIq/uLLcaHSkhIj3Eg97jcX9f6sHlaN8jZRbSOps1cdgdYZ92JuLDX+KpBrMv4FYvoW54KlxoEvmmch3Ot51fFFhX432silIzbRGpi0tMyW1PuOdEMdb8DytD3+Ix+iTzxNufOj3VFE3rNDNI1Mcvz3eTfNdUDFJ7tSkkHabg7RNAKLesfW6OdQbvdlCZ0cTQCleeIxgaPNOlSGdLfMinRZbe+gV/vhqWP+W1V595MDM5ZHxKNrdM2XxMxJwhE4IubSsG/M9NUBv1YvvYm0RMqM5/z2jWxfzXIx/X5r4XPy+aWImI1EUyKzH0Na0r3n1d2h+IpV72mb3DTVavykF7FypmruKsCfCCi7kXPK6XEgkCXoLlIrtRSrBwNjKePc7YWuGm29I00jN+VIRdTUmH2bC72C3A+nZlC4/hOuo3vlNl3YpWMe1kO8yRo5M9cIwfgaskGb7rR+8uvjmHWJVs8oLJ43LhyE1Ut+mpzuanoLk66ZXQYLe9w+yWVQx5nTFr8iXIK7p9KqddJ/5jBLky1YxMX/YG7IxkIk8Ms35iB1YpVx+YtEjxgIxu+WOACo=
   file: app/build/outputs/apk/debug/app-debug.apk
   file_glob: 'true'
   skip_cleanup: true
@@ -24,5 +24,5 @@ deploy:
     tags: true
     branch: master
     repo: YHossam/TestCI
-after_success:
+  after_success:
 - sh set_tags.sh
