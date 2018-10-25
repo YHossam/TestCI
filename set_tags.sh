@@ -14,10 +14,11 @@ if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
 
       git config --global user.email "yhossam@inmobly.com"
       git config --global user.name "YHossam"
-	echo -e "Logging Remote"
-	git remote -v
-	echo -e "End Of Remote Logging"
-
+      echo -e "Logging"
+	echo ${GH_TOKEN}
+      echo -e "Logging"
+      git remote remove origin 
+      git remote add origin  https://${GH_TOKEN}@github.com/YHossam/TestCI.git > /dev/null 2>&1
       # Add tag and push to master.
       git tag -a v${TRAVIS_BUILD_NUMBER} -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag."
       git push --quiet origin --tags
