@@ -1,23 +1,23 @@
 language: android
 android:
   components:
-    - tools # to get the new `repository-11.xml`
-    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
-    - platform-tools
-    - build-tools-28.0.3
-    - android-28
+  - tools
+  - tools
+  - platform-tools
+  - build-tools-28.0.3
+  - android-28
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_install:
-  - yes | sdkmanager "platforms;android-28"
+- yes | sdkmanager "platforms;android-28"
 script:
-   - ./gradlew assembleDebug
+- "./gradlew assembleDebug"
 
 deploy:
   provider: releases
   api_key:
-    secure: "0e988470190dba23fa69cdffe54a2137fa40d09c"
-  file: "app/build/outputs/apk/debug/app-debug.apk"
+    secure: itWTmzbrcc6obZqsLfEsbaJpgp3wkNvH0GbJ6Q5aDAPR5Oov83ydCBizzX5VUmI48m+1Y6dYovji/Ztve0S58WjO+dCLIn7Yiuk2nO9WTzhH/Wni74cWoRYp7IWA47+jg/gPXDycQskeUdqmD16pNqOmxBWAsJ3taZWrc4VuZVmCMFTqU+viJmASjSNzaEDx/u4v/9C78kemBqKoROK4LHRZ5A5jakAH23eHY6tmLbfc6qBFBwYScsQx0FYtsPODwlLwDmVF/QictGjXecZp2FwfTCaXkU41rkpj5pMagnh5ljYESfO/Gos3QORY9jtdmoifNLbBhwXiILviiZPamt70lWfLw7INKv0dKKxgvbt+ExDJDx5kkOt7pn33pG/Zacu4Lhr3oxOi0B5j5IlTQzMz4y2riKQug9fgSrX3c+L3iw+d8KA7w/qZPyK3S4hZkuhgCIU0NJA8ig9y5FxtoZHbREJZvchLHGGPH1J2vgR+sMjs9rrrJU5mEWUX4ZHAFUCkuz3ZswsaIhh19SmcQjzpPMNf95bpzymxUfxJ8VBtBN8mzkbRu3TAQrlj9yP55YgiUil1jxWxLjVd0gIfba5uyXXkl9Fl9Pt7HiBuBPoflHquJFr56r/O4ykv4Hk7o0XgnDCj31IPJzK04ZDf3+TeMnfD7lweyVztJPNqYXs=
+  file: app/build/outputs/apk/debug/app-debug.apk
   file_glob: "true"
   skip_cleanup: true
   on:
@@ -26,4 +26,4 @@ deploy:
     repo: YHossam/TestCI
 
 after_success:
-  - sh set_tags.sh
+- sh set_tags.sh
