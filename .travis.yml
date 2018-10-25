@@ -23,6 +23,7 @@ deploy:
     tags: true
     branch: master
     repo: YHossam/TestCI
+
 after_success:
 - sh set_tags.sh
 
