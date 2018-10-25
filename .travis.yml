@@ -16,7 +16,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: "c21e7ff1b900ac51ce86fda02463dbca2bb2c6e5"
+    secure: "0e988470190dba23fa69cdffe54a2137fa40d09c"
   file: "app/build/outputs/apk/debug/app-debug.apk"
   file_glob: "true"
   skip_cleanup: true

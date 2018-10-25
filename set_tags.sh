@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 BRANCH="master"
 
 echo -e ${TRAVIS_BRANCH}
