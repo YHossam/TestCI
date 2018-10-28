@@ -19,8 +19,8 @@ if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
 	  pwd
 	  ls app/build/outputs/apk/debug/
       echo -e "Logging"
-      git remote remove origin
-      git remote add origin  https://${GH_TOKEN}@github.com/YHossam/TestCI.git > /dev/null 2>&1
+#      git remote remove origin
+#      git remote add origin  https://${GH_TOKEN}@github.com/YHossam/TestCI.git > /dev/null 2>&1
 
      # Add tag and push to master.
       git tag -a v${TRAVIS_BUILD_NUMBER} -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag."
