@@ -19,6 +19,7 @@ if [ "$TRAVIS_BRANCH" = "$BRANCH" ]; then
 	  pwd
 	  ls app/build/outputs/apk/debug/
       echo -e "Logging"
+      git clone https://github.com/YHossam/TestCI.git
 #      git remote remove origin
 #      git remote add origin  https://${GH_TOKEN}@github.com/YHossam/TestCI.git > /dev/null 2>&1
 
